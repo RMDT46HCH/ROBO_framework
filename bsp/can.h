@@ -2,6 +2,8 @@
 #define CAN_H
 #include "stdint.h"
 
+#define CAN_MX_Register 4
+#define NULL 0
 typedef struct
 {
     uint32_t tx_id;
@@ -19,6 +21,8 @@ typedef struct
     void *id;
    
 }CAN_INIT_INSTANCE_t;
+
+CAN_INSTANCE_t *Can_Register(CAN_INIT_INSTANCE_t *config);
 
 #endif // !CAN_H
 

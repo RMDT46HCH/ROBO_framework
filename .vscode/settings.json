@@ -8,6 +8,9 @@
         "can.h": "c",
         "stdlib.h": "c",
         "robot_def.h": "c",
-        "cmd.h": "c"
+        "cmd.h": "c",
+        "stddef.h": "c",
+        "board_comm.h": "c",
+        "message_center.h": "c"
     }
 }

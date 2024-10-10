@@ -69,7 +69,7 @@ DJMotor_INSTANCE_t *DJMotorInit(motor_init_instance_t *config)
 
     config->can_init_config.id=instance;
     //还要注册can
-
+    instance->motor_can_instance=Can_Register(&config->can_init_config);
     DJMotor_Enanble(instance);
     djmotor_instance[idx++]=instance;
     return instance;

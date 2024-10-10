@@ -23,7 +23,7 @@ typedef enum
 typedef enum
 {
     MOTOR_NORMAL=0,
-    MOTOE_REVERSE,
+    MOTOR_REVERSE,
 }motor_reverse_flag_e;
 
 typedef enum
