@@ -38,7 +38,7 @@ void gimbal_init()
         },
         .motor_type=GM6020
     };
-    motor_init_instance_t yaw_config={
+    motor_init_instance_t pitch_config={
         .can_init_config={
             .tx_id=1,
         },
@@ -68,6 +68,8 @@ void gimbal_init()
     };
     gimbal_sub=SubRegister("gimbal_cmd",sizeof(gimbal_feedback_t));
     gimbal_pub=PubRegister("gimbal_feed",sizeof(gimbal_ctrl_t));
+    yaw_motor=DJMotorInit(&yaw_config);
+    pitch_motor=DJMotorInit(&pitch_config);
 }
 
 static void gimbal_mode_set()
