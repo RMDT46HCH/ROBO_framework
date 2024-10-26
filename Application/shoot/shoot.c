@@ -137,9 +137,6 @@ static void bullet_rate_set()
 }
 
 
-
-
-
 void shoot_task()
 {
     SubGetMessage(shoot_sub,&shoot_cmd_recv);
