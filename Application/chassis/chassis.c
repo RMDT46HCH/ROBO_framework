@@ -133,5 +133,6 @@ void Chassis_task()
     chassis_motor_state_set();
     rotate_speed_set();
     malun_cal();
+    feedback_to_odom();
     BOARD_can_send(chassis_cmd,(void*)&chassis_feedback_data);
 }

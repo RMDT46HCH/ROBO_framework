@@ -90,6 +90,7 @@ static void gimbal_mode_set()
             break;
     }
 }
+
 static void gimbal_feedback()
 {
     gimbal_feedback_data.yaw_motor_single_round_angle=yaw_motor->measure.angle_round;
