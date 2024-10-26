@@ -24,7 +24,7 @@ void BOARD_can_send(BOARD_CANcomm_INSTANCE *instance,uint8_t *data)
     memcpy(instance->raw_send_buff+ 2 ,data,instance->send_data_len);
     for(size_t i=0;i<instance->send_buff_len;i+=8)
     {
-
+        
     }
 }
 

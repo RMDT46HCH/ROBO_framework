@@ -71,8 +71,8 @@ void shoot_init()
     loader_config.can_init_config.tx_id=0x203;
     loader_config.motor_setting_config.motor_reverse_flag=MOTOR_REVERSE;
     loader=DJMotorInit(&loader_config);
-    shoot_sub=SubRegister("shoot_cmd",sizeof(shoot_feedback_t));
-    shoot_pub=PubRegister("shoot_feed",sizeof(shoot_ctrl_t));
+    shoot_sub=SubRegister("shoot_cmd",sizeof(shoot_ctrl_t));
+    shoot_pub=PubRegister("shoot_feed",sizeof(shoot_feedback_t));
 }
 
 static void shoot_mode_set()

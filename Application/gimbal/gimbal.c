@@ -66,8 +66,8 @@ void gimbal_init()
         },
         .motor_type=GM6020
     };
-    gimbal_sub=SubRegister("gimbal_cmd",sizeof(gimbal_feedback_t));
-    gimbal_pub=PubRegister("gimbal_feed",sizeof(gimbal_ctrl_t));
+    gimbal_sub=SubRegister("gimbal_cmd",sizeof(gimbal_ctrl_t));
+    gimbal_pub=PubRegister("gimbal_feed",sizeof(gimbal_feedback_t));
     yaw_motor=DJMotorInit(&yaw_config);
     pitch_motor=DJMotorInit(&pitch_config);
 }

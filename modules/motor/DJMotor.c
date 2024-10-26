@@ -3,10 +3,12 @@
 
 int idx=0;
 static DJMotor_INSTANCE_t *djmotor_instance[DJMotor_num]={NULL};
+
 static CAN_INSTANCE_t send_to_can[6]=
 {
     NULL,
 };
+
 void DJMotor_Stop(DJMotor_INSTANCE_t *motor)
 {
     motor->motor_setting.motor_enable_flag=MOTOR_STOP;
@@ -68,7 +70,7 @@ DJMotor_INSTANCE_t *DJMotorInit(motor_init_instance_t *config)
     instance->motor_controller.other_angle_feedback_ptr=config->pid_init_config.other_speed_feedback_ptr;
 
     config->can_init_config.id=instance;
-    //还要注册can
+
     instance->motor_can_instance=Can_Register(&config->can_init_config);
     DJMotor_Enanble(instance);
     djmotor_instance[idx++]=instance;
